@@ -1,0 +1,8 @@
+Metric	Statistic	p_value
+Kolmogorov–Smirnov D	0.122767	1.96694e-14
+Mann–Whitney U	3.33371e+06	0.264684
+Anderson–Darling A²	28.5391	1e-05
+Cramér–von Mises T	4.80102	2.74309e-11
+Wasserstein EMD	3.41819	
+Energy distance	0.0999343	3.36957e-08
+AUC separability (≃0.5 good)	0.653364	

@@ -1,0 +1,79 @@
+# energy_etl repository outline (updated 2025-10-03)
+
+energy_etl/
+│
+├── data/
+│   ├── Energy.db                          # primary SQLite database
+│   └── Discoveries_Production_backdated.csv
+│
+├── archive/
+│   ├── impute_energy_db_v0.py             # earlier pipeline experiments
+│   └── impute_energy_db_v1.py
+│
+├── Spreadsheet data/                      # raw Excel inputs (manifest + update workbooks)
+├── Text files/
+│   ├── Outline.txt (this document)
+│   ├── column_types.txt
+│   ├── Coal_column_types.txt
+│   └── diagnostics.txt
+├── plots/                                 # exported charts (3 items)
+├── img/                                   # placeholder, currently empty
+├── venv/                                  # virtualenv scaffold (empty placeholder)
+│
+├── run_pipeline.py                        # CLI driver (imports import_batch, expects append/build modules)
+├── import_batch.py                        # rebuild SQLite DB from manifest / raw sheets
+├── summarize_fossil_fuels.py              # generate fossil fuel summary tables (long/wide)
+├── build_modified_discoveries.py          # construct discoveries-by-year series
+├── split_oil_gas.py                       # partition mixed fields into oil vs gas
+├── fix_reserves.py                        # reserves cleanup using EI benchmarks + smoothing
+├── fix_reserves_v2.py                     # enhanced reserves fixer (newer iteration)
+├── calibrate_imputation.py                # calibrate reserve growth / imputation parameters
+├── coverage_analysis.py                   # assess data coverage and imputation mix
+├── analyze_reserves.py                    # exploratory reserve analysis helpers
+├── convert_coal_to_EJ.py                  # coal-specific unit conversions
+├── convert_gas_oil_to_EJ.py               # oil & gas unit conversions
+├── support scripts:
+│   ├── statistical_tests.py               # KS/AD/Wasserstein diagnostics on imputed data
+│   ├── diagnose_missing_quantities.py     # spot missing production/discovery values
+│   ├── check_tables.py                    # schema/dtype checks on DB tables
+│   ├── check_results.py                   # validate result sets against expectations
+│   └── fix_hardcoded.py                   # replace legacy hard-coded adjustments
+├── imputation scripts:
+│   ├── impute_oil_gas_db.py               # primary DB-centric imputation pipeline
+│   ├── impute_oil_gas_db_v1.py            # legacy variant
+│   ├── impute_oil_gas_100_percent.py      # force full coverage imputation run
+│   ├── impute_oil.py                      # standalone oil workflow
+│   ├── impute_gas.py                      # standalone gas workflow
+│   └── impute_coal.py                     # standalone coal workflow
+├── statistical fitting:
+│   ├── fit_Richards.py
+│   ├── fit_Richards_2Pt.py
+│   └── logistic_fit.py
+├── helpers & utilities:
+│   ├── utils.py                           # logging, DB helpers, percent_to_float, etc.
+│   ├── _peek_schema.py                    # inspect SQLite schema
+│   ├── _peek_cols_runtime.py              # runtime column sampling
+│   └── _peek_schema_cols.py               # schema column comparison
+├── verification tools:
+│   ├── verify_imputation.py
+│   ├── verify_100_percent.py
+│   ├── impute_oil.log / impute_gas.log / impute_coal.log (latest run logs)
+│   ├── impute_oil_gas_db.log              # detailed DB imputation run log
+│   └── results_*.txt / results_*.tsv      # fit diagnostics per fuel
+│
+├── fossil_fuels_summary*.csv              # generated summary exports (wide, long, fixed variants)
+├── fuels_summary_reduced*.csv             # reduced summary variants
+├── fossil_fuels_reconciliation.csv        # reconciliation report
+├── fossil_fuels_summary_richards_v4.csv   # richards-fit derived summary
+├── modified_discoveries*.csv              # discovery datasets (raw & fixed)
+└── fuels_summary_reduced_richards_*.csv   # reduced tables from Richards-fit runs
+
+# Previously planned but currently absent modules (referenced in legacy outline & `run_pipeline.py`)
+- append_updates.py                        # yearly workbook ingestion (missing)
+- build_summary.py                         # summary orchestrator (missing)
+- energy_etl/__init__.py                   # package initializer (missing; repo is flat scripts)
+- config.py, logging_setup.py, units.py    # config/logging structures (not found)
+- schema.py, country_harmonization.py      # schema/country helpers (not found)
+- coverage_report.py                       # coverage report module (not found)
+- io/ (db.py, csv_io.py)                   # IO package not present
+- impute/ package (feature_engineering.py, methods.py, etc.)

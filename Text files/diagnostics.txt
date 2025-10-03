@@ -1,0 +1,116 @@
+The columns in Oil_Gas_Production_Reserves:
+
+Unit ID	TEXT
+Unit name	TEXT
+Country/Area	TEXT
+Production/reserves	TEXT
+Wiki URL	TEXT
+Fuel description	TEXT
+Reserves classification (original)	TEXT
+Quantity (original)	REAL
+Units (original)	TEXT
+Data year	TEXT
+Quantity (converted)	REAL
+Units (converted)	TEXT
+discovery year_final_x	INTEGER
+_imputed_flag_year_x	INTEGER
+_imputed_by_year_x	TEXT
+_confidence_year_x	TEXT
+Fuel description (normalized)	TEXT
+Quantity_initial_EJ	REAL
+_imputed_flag_qty	INTEGER
+_imputed_by_qty	TEXT
+_confidence_qty	TEXT
+discovery year_final_y	INTEGER
+_imputed_flag_year_y	INTEGER
+_imputed_by_year_y	TEXT
+_confidence_year_y	TEXT
+discovery year_final	INTEGER
+_imputed_flag_year	INTEGER
+_imputed_by_year	TEXT
+_confidence_year	TEXT
+discovery year_final_og_fields	INTEGER
+_imputed_flag_year_og_fields	INTEGER
+_imputed_by_year_og_fields	TEXT
+_confidence_year_og_fields	TEXT
+
+Quantity_initial_EJ is NULL for all entries, so no imputation happened. The column "Quantity (converted)" has no entries that are NULL, so the Quantity_initial_EJ column should also have been non-NULL.
+
+The columns in Coal_open_mines:
+
+GEM Mine ID	TEXT
+MSHA ID	REAL
+Country / Area	TEXT
+Mine Name	TEXT
+Mine Name AKAs	TEXT
+Mine Name (Non-ENG)	TEXT
+Complex Name	TEXT
+GEM Wiki Page (ENG)	TEXT
+GEM Wiki Page (Non-ENG)	TEXT
+Status	TEXT
+Status Detail	TEXT
+Project Type	TEXT
+Project Phase	TEXT
+Owners	TEXT
+Owner GEM Entity ID	TEXT
+Owners (Non-ENG)	TEXT
+Parent Company	TEXT
+Company HQs	TEXT
+Capacity (Mtpa)	TEXT
+Production (Mtpa)	TEXT
+Year of Production	TEXT
+Coal Output (Annual, Mst)	REAL
+Mine Type	TEXT
+Mining Method	TEXT
+Mine Size (Km2)	TEXT
+Mine Depth (m)	REAL
+Depth Accuracy	TEXT
+Workforce Size	TEXT
+Workforce Accuracy	TEXT
+Coal Type	TEXT
+Coal Grade	TEXT
+Percentage of Met Coal	REAL
+Percentage of Thermal Coal	REAL
+Accuracy Rating	TEXT
+Reported Year of Percentage Split	REAL
+Total Reserves (Proven and Probable, Mt)	REAL
+Year of Total Reserves Recorded	TEXT
+Total Resource (Inferred, Indicated, Measured)	REAL
+Reserve to Production Ratio (R/P)	REAL
+Opening Year	TEXT
+Closing Year	REAL
+Reported Life of Mine	TEXT
+Reported Year of Mine Life	TEXT
+Coalfield	TEXT
+Location	TEXT
+Prefecture, District	TEXT
+State, Province	TEXT
+Subregion	TEXT
+Region	TEXT
+Latitude	REAL
+Longitude	REAL
+Location Accuracy	TEXT
+Primary Consumer, Destination	TEXT
+Coal Plant, Steel Plant, Terminal	TEXT
+Coal Plant, Steel Plant, Terminal GEM Wiki	TEXT
+Gas-level Rating	TEXT
+Gas-level Rating Appraisal Year	TEXT
+Reported Coal Mine Methane Emissions (thousand tonnes per year)	REAL
+Year of Reported Coal Mine Methane Emissions	TEXT
+Source ID	TEXT
+Has associated plume data	TEXT
+Has associated CMM mitigation data	TEXT
+GEM Coal Mine Methane Emissions Estimate (MCM/yr)	REAL
+GEM Coal Mine Methane Emissions Estimate (M tonnes/yr)	REAL
+Methane Gas Content (m^3/tonne) (Updated)	REAL
+Methane Emissions Factor (Updated)	REAL
+CMM Emissions (CO2e 20 years)	REAL
+CMM Emissions (CO2e 100 years)	REAL
+ISO Code	INTEGER
+coal_type_normalized	TEXT
+reserves_initial_EJ	REAL
+_imputed_flag_qty	INTEGER
+_imputed_by_qty	TEXT
+_confidence_qty	TEXT
+
+There is no imputed opening year for coal mines, and 17 imputed reserves_initial_EJ are NULL.

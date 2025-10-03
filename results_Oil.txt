@@ -1,0 +1,9 @@
+=== Statistical comparison: Oil ===
+Metric	Statistic	p-value
+Kolmogorov–Smirnov D	0.12277	1.967e-14
+Mann–Whitney U	3.3337e+06	0.2647
+Anderson–Darling A²	28.539	1e-05
+Cramér–von Mises T	4.801	2.743e-11
+Wasserstein EMD	3.4182	
+Energy distance	0.099934	3.37e-08
+AUC separability (≃0.5 good)	0.65336	

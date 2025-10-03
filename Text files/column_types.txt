@@ -1,0 +1,47 @@
+Coal_open_mines:
+capacity_(mtpa)	REAL
+production_(mtpa) REAL
+year_of_production INTEGER
+coal_output_(annual,_mst) REAL
+mine_size_(km2) REAL
+mine_depth_(m)	REAL
+workforce_size INTEGER
+percentage_of_met_coal	REAL
+percentage_of_thermal_coal	REAL
+reported_year_of_percentage_split INTEGER
+total_reserves_(proven_and_probable,_mt) REAL
+year_of_total_reserves_recorded	INTEGER
+total_resource_(inferred,_indicated,_measured) REAL
+reserve_to_production_ratio_(r/p)	REAL
+opening_year	INTEGER
+closing_year	INTEGER
+reported_life_of_mine	INTEGER
+reported_year_of_mine_life	INTEGER
+latitude	REAL
+longitude	REAL
+gas-level_rating_appraisal_year	INTEGER
+reported_coal_mine_methane_emissions_(thousand_tonnes_per_year)	REAL
+year_of_reported_coal_mine_methane_emissions INTEGER
+gem_coal_mine_methane_emissions_estimate_(mcm/yr)	REAL
+gem_coal_mine_methane_emissions_estimate_(m_tonnes/yr)	REAL
+methane_gas_content_(m^3/tonne)_(updated)	REAL
+methane_emissions_factor_(updated)	REAL
+cmm_emissions_(co2e_20_years)	REAL
+cmm_emissions_(co2e_100_years)	REAL
+iso_code	INTEGER
+
+Oil_Gas_Production_Reserves:
+Production/reserves	REAL
+Quantity (original)	REAL
+Data year	INTEGER
+Quantity (converted) REAL
+
+Oil_Gas_fields:
+Latitude	REAL
+Longitude	REAL
+Status year	INTEGER
+Discovery year	INTEGER
+FID Year	INTEGER
+Production start year	INTEGER
+
+

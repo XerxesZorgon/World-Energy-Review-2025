@@ -1,0 +1,24 @@
+2025-08-09 09:18:36,193 INFO [SCHEMA] Adding Coal_open_mines._imputed_by_year TEXT
+2025-08-09 09:18:36,206 INFO [SCHEMA] Adding Coal_open_mines._confidence_year TEXT
+2025-08-09 09:18:36,214 INFO [SCHEMA] Adding Coal_open_mines._imputed_flag_qty INTEGER
+2025-08-09 09:18:36,222 INFO [SCHEMA] Adding Coal_open_mines._imputed_by_qty TEXT
+2025-08-09 09:18:36,229 INFO [SCHEMA] Adding Coal_open_mines._confidence_qty TEXT
+2025-08-09 09:18:37,336 INFO Finished imputation for Coal_open_mines
+2025-08-09 14:10:47,998 INFO [SCHEMA] Adding Coal_open_mines.opening_year_P10 REAL
+2025-08-09 14:10:48,008 INFO [SCHEMA] Adding Coal_open_mines.opening_year_P50 REAL
+2025-08-09 14:10:48,016 INFO [SCHEMA] Adding Coal_open_mines.opening_year_P90 REAL
+2025-08-09 14:10:48,257 WARNING Year model skipped: cannot access local variable 'conf_year' where it is not associated with a value
+2025-08-09 14:10:49,819 INFO Finished imputation for Coal_open_mines
+2025-08-10 09:38:43,005 INFO [SCHEMA] Adding Coal_open_mines.opening_year_final INTEGER
+2025-08-10 09:38:43,013 INFO [SCHEMA] Adding Coal_open_mines._imputed_flag_year INTEGER
+2025-08-10 09:38:43,020 INFO [SCHEMA] Adding Coal_open_mines._imputed_by_year TEXT
+2025-08-10 09:38:43,027 INFO [SCHEMA] Adding Coal_open_mines._confidence_year TEXT
+2025-08-10 09:38:43,035 INFO [SCHEMA] Adding Coal_open_mines.opening_year_P10 REAL
+2025-08-10 09:38:43,044 INFO [SCHEMA] Adding Coal_open_mines.opening_year_P50 REAL
+2025-08-10 09:38:43,051 INFO [SCHEMA] Adding Coal_open_mines.opening_year_P90 REAL
+2025-08-10 09:38:43,057 INFO [SCHEMA] Adding Coal_open_mines.reserves_initial_EJ REAL
+2025-08-10 09:38:43,062 INFO [SCHEMA] Adding Coal_open_mines._imputed_flag_qty INTEGER
+2025-08-10 09:38:43,068 INFO [SCHEMA] Adding Coal_open_mines._imputed_by_qty TEXT
+2025-08-10 09:38:43,074 INFO [SCHEMA] Adding Coal_open_mines._confidence_qty TEXT
+2025-08-10 09:44:01,056 WARNING Year model skipped: cannot access local variable 'conf_year' where it is not associated with a value
+2025-08-10 09:44:02,180 INFO Finished imputation for Coal_open_mines

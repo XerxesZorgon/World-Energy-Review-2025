@@ -1,0 +1,69 @@
+gem_mine_id	TEXT
+msha_id	REAL
+country_/_area	TEXT
+mine_name	TEXT
+mine_name_akas	TEXT
+mine_name_(non-eng)	TEXT
+complex_name	TEXT
+gem_wiki_page_(eng)	TEXT
+gem_wiki_page_(non-eng)	TEXT
+status	TEXT
+status_detail	TEXT
+project_type	TEXT
+project_phase	TEXT
+owners	TEXT
+owner_gem_entity_id	TEXT
+owners_(non-eng)	TEXT
+parent_company	TEXT
+company_hqs	TEXT
+capacity_(mtpa)	TEXT <- REAL
+production_(mtpa)	TEXT <- REAL
+year_of_production	TEXT <- INTEGER
+coal_output_(annual,_mst)	REAL
+mine_type	TEXT
+mining_method	TEXT
+mine_size_(km2)	TEXT <- REAL
+mine_depth_(m)	REAL
+depth_accuracy	TEXT
+workforce_size	REAL <- INTEGER
+workforce_accuracy	TEXT
+coal_type	TEXT
+coal_grade	TEXT
+percentage_of_met_coal	REAL
+percentage_of_thermal_coal	REAL
+accuracy_rating	TEXT
+reported_year_of_percentage_split	REAL <- INTEGER
+total_reserves_(proven_and_probable,_mt)	REAL
+year_of_total_reserves_recorded	TEXT <- INTEGER
+total_resource_(inferred,_indicated,_measured)	REAL
+reserve_to_production_ratio_(r/p)	REAL
+opening_year	TEXT <- INTEGER
+closing_year	REAL <- INTEGER
+reported_life_of_mine	TEXT <- INTEGER
+reported_year_of_mine_life	TEXT <- INTEGER
+coalfield	TEXT
+location	TEXT
+prefecture,_district	TEXT
+state,_province	TEXT
+subregion	TEXT
+region	TEXT
+latitude	REAL
+longitude	REAL
+location_accuracy	TEXT
+primary_consumer,_destination	TEXT
+coal_plant,_steel_plant,_terminal	TEXT
+coal_plant,_steel_plant,_terminal_gem_wiki	TEXT
+gas-level_rating	TEXT
+gas-level_rating_appraisal_year	TEXT
+reported_coal_mine_methane_emissions_(thousand_tonnes_per_year)	REAL
+year_of_reported_coal_mine_methane_emissions	TEXT <- INTEGER
+source_id	TEXT
+has_associated_plume_data	TEXT
+has_associated_cmm_mitigation_data	TEXT
+gem_coal_mine_methane_emissions_estimate_(mcm/yr)	REAL
+gem_coal_mine_methane_emissions_estimate_(m_tonnes/yr)	REAL
+methane_gas_content_(m^3/tonne)_(updated)	REAL
+methane_emissions_factor_(updated)	REAL
+cmm_emissions_(co2e_20_years)	REAL
+cmm_emissions_(co2e_100_years)	REAL
+iso_code	INTEGER

@@ -1,0 +1,9 @@
+=== Statistical comparison: Gas ===
+Metric	Statistic	p-value
+Kolmogorov–Smirnov D	0.11098	1.393e-09
+Mann–Whitney U	2.6148e+06	0.1588
+Anderson–Darling A²	24.268	1e-05
+Cramér–von Mises T	4.348	8.314e-11
+Wasserstein EMD	0.96334	
+Energy distance	0.029495	6.473e-11
+AUC separability (≃0.5 good)	0.62399	

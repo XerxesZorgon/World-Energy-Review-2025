@@ -1,0 +1,9 @@
+=== Statistical comparison: Coal ===
+Metric	Statistic	p-value
+Kolmogorov–Smirnov D	0.049016	0.01051
+Mann–Whitney U	3.0898e+06	0.002049
+Anderson–Darling A²	7.3741	1e-05
+Cramér–von Mises T	1.05	0.001879
+Wasserstein EMD	0.98276	
+Energy distance	0.046806	5.641e-06
+AUC separability (≃0.5 good)	0.50618	
