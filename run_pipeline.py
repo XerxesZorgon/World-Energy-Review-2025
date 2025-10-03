@@ -53,21 +53,18 @@ from energy_etl import import_batch, append_updates, build_summary
 # Heavy imputation only imported if requested (it pulls in sklearn, etc.)
 IMPUTE_MODULE = "energy_etl.impute.impute_energy_db"
 
-
-# ──────────────────────────────────────────────────────────────────────────────
 #  helpers
 # ──────────────────────────────────────────────────────────────────────────────
 
 def _config_logging(verbose: bool = False) -> None:
-    fmt = "%{asctime}s :: %{levelname}s :: %{message}s".replace("%", "%(")
+    fmt = "%(asctime)s :: %(levelname)s :: %(message)s"
     level = logging.DEBUG if verbose else logging.INFO
-    logging.basicConfig(level=level, format=fmt, datefmt="%Y‑%m‑%d %H:%M:%S")
+    logging.basicConfig(level=level, format=fmt, datefmt="%Y-%m-%d %H:%M:%S")
 
 
 def _import_optional(name: str):
     """Import *name* only if the user asked for its stage."""
     import importlib
-
     try:
         return importlib.import_module(name)
     except ModuleNotFoundError as exc:
@@ -120,7 +117,8 @@ def main(argv: list[str] | None = None) -> None:
     # 3) summary tables
     if args.summary:
         logging.info("[3/4] Generating summary tables …")
-        build_summary.main()
+        build_summary.generate_summaries()
+        build_summary.apply_reserve_fixes()
 
     # 4) imputation (late import to keep startup light)
     if args.impute:

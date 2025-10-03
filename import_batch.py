@@ -201,5 +201,16 @@ def batch_import(manifest_path):
     conn.close()
     print("\n✅ All manifest entries processed.")
 
+
+def batch_import_from_manifest(manifest_path: str | None = None) -> None:
+    """Public wrapper used by `run_pipeline.py` to rebuild the database."""
+    path = manifest_path or MANIFEST_PATH
+    batch_import(path)
+
+
+def main() -> None:
+    batch_import_from_manifest()
+
+
 if __name__ == "__main__":
-    batch_import(MANIFEST_PATH)
+    main()

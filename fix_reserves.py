@@ -538,21 +538,25 @@ def fix_fuel_reserves(df: pd.DataFrame, fuel: str, ei_data: Dict[str, pd.DataFra
     
     return df
 
-def main():
-    """Main function to fix reserves in fossil_fuels_summary.csv"""
-    
-    # File paths
-    csv_path = Path("fossil_fuels_summary.csv")
-    db_path = Path("data/Energy.db")
-    output_path = Path("fossil_fuels_summary_fixed_v2.csv")
-    
+def main(
+    *,
+    summary_path: Path | str = Path("fossil_fuels_summary.csv"),
+    db_path: Path | str = Path("data/Energy.db"),
+    output_path: Path | str = Path("fossil_fuels_summary_fixed_v2.csv"),
+) -> None:
+    """Fix reserves in a fossil fuel summary CSV."""
+
+    csv_path = Path(summary_path)
+    db_path = Path(db_path)
+    output_path = Path(output_path)
+
     if not csv_path.exists():
         print(f"Error: {csv_path} not found")
         return
-    
+
     if not db_path.exists():
         print(f"Warning: {db_path} not found, proceeding without EI calibration")
-    
+
     print("Loading fossil fuels summary...")
     df = pd.read_csv(csv_path)
     print(f"Loaded {len(df)} rows, {len(df.columns)} columns")
